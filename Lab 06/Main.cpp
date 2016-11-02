@@ -47,7 +47,7 @@ void processRectangle() {
 	cin >> height;
 	drawRectangle(height, width);
 }
-int main () {
+int main() {
 	while (true) {
 		promptForSelection();
 		int input = checkInput();
