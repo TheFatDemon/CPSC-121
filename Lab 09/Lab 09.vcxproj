@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Lab 06\Fight.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{39627910-7850-42A9-BA7C-7D5D86DCCD65}</ProjectGuid>
     <RootNamespace>Lab09</RootNamespace>
