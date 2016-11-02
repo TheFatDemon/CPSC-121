@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Fight.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fight.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Fight.obj" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{39627910-7850-42A9-BA7C-7D5D86DCCD65}</ProjectGuid>
