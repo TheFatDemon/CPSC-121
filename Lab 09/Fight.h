@@ -1,8 +1,8 @@
-//Eric May
-//CS 121 Spring 16
-//Declares a Fight class that facilitates combat between two participants
+// Mario Segura
+// CS 121 Fall 16
+// Declares a Fight class that facilitates combat between two participants
 
-//ifndef wrapper included so multiple inclusions doesn't cause errors
+// ifndef wrapper included so multiple inclusions doesn't cause errors
 #ifndef _Fight_H
 #define _Fight_H
 

@@ -1,3 +1,7 @@
+// Mario Segura
+// CPSC 121 Fall 16
+// Implementation for Fight Class
+
 #include "Fight.h"
 #include <iostream>
 

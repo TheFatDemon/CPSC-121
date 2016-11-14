@@ -1,6 +1,6 @@
-//Eric May
-//CS 121 Spring 16
-//Includes our other files and briefly uses them
+// Mario Segura
+// CS 121 Fall 16
+// Includes our other files and briefly uses them
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
