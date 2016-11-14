@@ -17,29 +17,23 @@ int Fight::takeTurn() {
 
 	// Foe 0 attacks foe 1
 
+	// Get a random number between 0 and 1
+	int attacker = rand() % 2;
+	int attacked = (attacker == 1 ? 0 : 1);
+
 	// Logic
-	int attack = foes[0].attackMin + rand() % foes[0].attackRange;
-	foes[1].curHealth = foes[1].curHealth - attack;
+	int attack = foes[attacker].attackMin + rand() % foes[attacker].attackRange;
+	foes[attacked].curHealth = foes[attacked].curHealth - attack;
 
 	// Display what happened
-	cout << foes[0].name << " has attacked " <<
-		foes[1].name << " for " <<
+	cout << foes[attacker].name << " has attacked " <<
+		foes[attacked].name << " for " <<
 		attack << " damage." << endl;
 
 	if (foes[1].curHealth <= 0)
 	{
 		return 2;
 	}
-
-	// Logic
-	attack = foes[1].attackMin + rand() % foes[1].attackRange;
-	foes[0].curHealth = foes[0].curHealth - attack;
-	
-	// Display what happened
-	cout << foes[1].name << " has attacked " <<
-		foes[0].name << " for " <<
-		attack << " damage." << endl;
-
 	// Foe 1 attacks foe 0
 	if (foes[0].curHealth <= 0)
 	{
