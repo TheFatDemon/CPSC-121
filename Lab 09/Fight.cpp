@@ -8,7 +8,7 @@
 using namespace std;
 
 Fight::Fight() {
-
+	// No need for Constructor
 }
 
 int Fight::takeTurn() {
