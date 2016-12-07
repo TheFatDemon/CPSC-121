@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "TicTacToe.h"
 
@@ -13,7 +12,7 @@ int TicTacToe::checkWin() {
 }
 
 void TicTacToe::displayBoard() {
-
+	// Really overly complicated loop to display board
 	cout << "+-+-+-+" << endl;
 	for (int i = 0; i < 3; i++) {
 		cout << "|";
@@ -21,10 +20,14 @@ void TicTacToe::displayBoard() {
 			cout << board[i][j] << "|";
 		}
 		cout << endl;
+		cout << "+-+-+-+" << endl;
 	}
-	cout << "+-+-+-+" << endl;
 }
 
 int TicTacToe::makeMove(int position) {
-	return 0;
+	// Check to make sure `position` is within 0-8 range
+	if (position < 0 || position > 8) {
+		return -1;
+	}
+	return checkWin();
 }
