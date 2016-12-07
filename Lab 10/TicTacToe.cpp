@@ -38,6 +38,42 @@ int TicTacToe::checkWin() {
 		}
 	}
 
+	// Now first algorithm, but in different order
+	for (int y = 0; y < 3; y++) {
+		// Iterate through each column
+		for (int x = 0; x < 3; x++) {
+			if (board[x][y] != lastPlayer) {
+				break;
+			}
+			if (x == 2) {
+				return lastPlayer;
+			}
+		}
+	}
+
+	// Now for diagonal logic
+	for (int x = 0; x < 3; x++) {
+		for (int y = 0; y < 3; y++) {
+			if (x != y) {
+				break;
+			}
+			else {
+				if (board[x][y] != lastPlayer) 
+				{
+					break;
+				}
+				if (x == 2 && y == 2) {
+					return lastPlayer;
+				}
+			}
+		}
+	}
+	
+	// Now for Anti-Diagonal
+	if (board[0][2] == lastPlayer) {
+		// Eh, we'll do it later
+	}
+
 	return 0;
 }
 
