@@ -29,5 +29,29 @@ int TicTacToe::makeMove(int position) {
 	if (position < 0 || position > 8) {
 		return -1;
 	}
+
+	// We now need to get the x and y of the position, relative to the board
+	int x = position / 3; // Ex: 5 / 3 = 1
+	int y = position % 3; // Ex: 3 % 3 = 2
+
+	// Now that we have X and Y, we check the board if the value is in there already
+	if (board[x][y] == 1 || board[x][y] == 2) {
+		// The spot is taken
+		return -1;
+	}
+	else {
+		// Empty spot WHOO!
+		board[x][y] = nextPlayer;
+	}
+
+	// Indicate next player
+	// If nextPlayer = 2, set it to 2, else set it to 1
+	if (nextPlayer == 2) {
+		nextPlayer = 1;
+	}
+	else {
+		nextPlayer = 2;
+	}
+
 	return checkWin();
 }
