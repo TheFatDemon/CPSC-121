@@ -23,15 +23,19 @@ int TicTacToe::checkWin() {
 		lastPlayer = 2;
 	}
 
-
-	// Check for 
-	// x
-	// x
-	// x
-	// Strategy: We know that in a vertical win, at least one column needs to be populated
-	for (int i = 0; i < 3; i++)
+	// Iterate through each column
+	for (int x = 0; x < 3; x++)
 	{
-		if (board[i][0] != lastPlayer && board[i][0]);
+		// Iterate through each row
+		for (int y = 0; y < 3; y++) {
+			if (board[x][y] != lastPlayer) {
+				// If the spot does not equal the last player's number, last player didn't win
+				break;
+			}
+			if (y == 2) {
+				return lastPlayer;
+			}
+		}
 	}
 
 	return 0;
